@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /f/
+Allow: /login
+Allow: /signup
+Disallow: /dashboard
+Disallow: /builder/
+Disallow: /forms/
+
+Sitemap: https://formcraft.app/sitemap.xml

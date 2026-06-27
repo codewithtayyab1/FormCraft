@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Light mode tokens (default / :root) ──────────────────────────── */
+:root {
+  --color-bg: #FAFAFF;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F3F1FB;
+  --color-border: #E6E2F2;
+  --color-border-strong: #D4CDE8;
+  --color-accent: #7C4DEF;
+  --color-accent-hover: #6B3DE0;
+  --color-accent-soft: #F0EBFF;
+  --color-neon: #0891B2;
+  --color-neon-soft: #67E8F9;
+  --color-danger: #DC6B43;
+  --color-danger-soft: #FDEEE8;
+  --color-text-primary: #1A1530;
+  --color-text-secondary: #4A4170;
+  --color-text-muted: #8B82A8;
+}
+
+/* ── Dark mode tokens (.dark on <html>) ───────────────────────────── */
+.dark {
+  --color-bg: #0E0B1A;
+  --color-surface: #1A1530;
+  --color-surface-hover: #241D40;
+  --color-border: #2D2548;
+  --color-border-strong: #3D3460;
+  --color-accent: #8B5CF6;
+  --color-accent-hover: #7C4DEF;
+  --color-accent-soft: #1F1635;
+  --color-neon: #06B6D4;
+  --color-neon-soft: #0E7490;
+  --color-danger: #F0997B;
+  --color-danger-soft: #2A1820;
+  --color-text-primary: #F5F3FF;
+  --color-text-secondary: #C9BDF0;
+  --color-text-muted: #7E7397;
+}
+
+@layer components {
+  .fc-input {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    background: var(--color-bg);
+    border: 0.5px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text-primary);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+  .fc-input::placeholder { color: var(--color-text-muted); }
+  .fc-input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+  }
+  /* Select needs explicit bg so options panel inherits the dark theme */
+  select.fc-input { cursor: pointer; }
+  select.fc-input option { background: var(--color-surface); color: var(--color-text-primary); }
+}
+
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+
+  * {
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p \"c:/Users/t7589/OneDrive/Desktop/Form Craft Project/server/models\" \"c:/Users/t7589/OneDrive/Desktop/Form Craft Project/server/routes\" \"c:/Users/t7589/OneDrive/Desktop/Form Craft Project/server/controllers\" \"c:/Users/t7589/OneDrive/Desktop/Form Craft Project/server/middleware\")",
+      "Bash(npm init *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(cat \"c:/Users/t7589/AppData/Local/Temp/claude/c--Users-t7589-OneDrive-Desktop-Form-Craft-Project/ec34ca25-0053-4189-8abe-0f314d62bc03/tasks/blyotk16j.output\" 2>/dev/null | tail -8)",
+      "Read(//c/Users/t7589/AppData/Local/Temp/claude/c--Users-t7589-OneDrive-Desktop-Form-Craft-Project/ec34ca25-0053-4189-8abe-0f314d62bc03/tasks/**)",
+      "Bash(node -e \"require\\('jest'\\)\")",
+      "Bash(node -e \"require\\('supertest'\\)\")",
+      "Bash(node -e \"require\\('mongodb-memory-server'\\)\")",
+      "Bash(npm test *)",
+      "Bash(npm run *)"
+    ]
+  }
+}
