@@ -17,7 +17,7 @@ const allowedOrigins = process.env.CLIENT_URL
 app.use(cors({ origin: allowedOrigins, credentials: true }))
 app.use(express.json())
 
-app.get('/', (req, res) => res.json({ status: 'ok' }))
+app.get('/', (req, res) => res.json({ status: 'ok', message: 'FormCraft API is running' }))
 app.use('/api/auth',   authRoutes)
 app.use('/api/forms',  formRoutes)
 app.use('/api/public', publicRoutes)
