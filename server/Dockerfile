@@ -10,6 +10,6 @@ RUN npm ci --omit=dev
 COPY . .
 
 # Back4app injects PORT at runtime; 5000 is the local fallback
-EXPOSE 5000
+EXPOSE 8080
 
 CMD ["npm", "start"]
